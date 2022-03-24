@@ -7,7 +7,9 @@ const FooterLink = ({ title, links }) => {
 				<h4 className='footer__navlinks__title'>{title}</h4>
 			</li>
 			{links.map(link => (
-				<li className='navlink'>{link}</li>
+				<li className='navlink' key={link}>
+					{link}
+				</li>
 			))}
 		</ul>
 	);
