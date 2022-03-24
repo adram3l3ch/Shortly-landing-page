@@ -1,0 +1,11 @@
+.outro {
+	background: url(../../images/bg-boost-desktop.svg) no-repeat center / cover,
+		var(--secondary-400);
+	min-height: 10rem;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: var(--s2);
+}

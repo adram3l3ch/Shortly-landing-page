@@ -1,4 +1,5 @@
-import Button from '../components/button';
+import Button from '../button';
+import './style.css';
 
 const Outro = () => {
 	return (
