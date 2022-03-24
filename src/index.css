@@ -84,7 +84,7 @@ li {
 		font-size: clamp(2rem, 11vw, 4rem);
 	}
 }
-@media (max-width: 350px) {
+@media (max-width: 380px) {
 	:root {
 		font-size: calc(1rem - 5px);
 	}

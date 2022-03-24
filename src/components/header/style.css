@@ -27,8 +27,20 @@
 	margin-left: auto;
 }
 
+.hamburger {
+	font-size: 4rem;
+	display: none;
+}
+
 @media (max-width: 800px) {
 	.header__navlinks {
 		display: none;
+	}
+	.header {
+		margin-block: var(--s2);
+	}
+	.hamburger {
+		display: block;
+		cursor: pointer;
 	}
 }
