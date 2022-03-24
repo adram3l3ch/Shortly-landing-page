@@ -1,0 +1,42 @@
+.features__cards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--s3);
+	position: relative;
+}
+
+.features__cards::before {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: var(--s1);
+	background-color: var(--primary-400);
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.featureCard {
+	padding: var(--s4) var(--s3);
+	background-color: red;
+	border-radius: var(--s1);
+	position: relative;
+	background-color: white;
+	height: max-content;
+}
+
+.featureCard__image {
+	width: 5rem;
+	aspect-ratio: 1;
+	background-color: rgb(14, 15, 15);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	transform: translateY(-50%);
+}
+
+.featureCard__title {
+	margin-top: var(--s4);
+}

@@ -1,0 +1,23 @@
+.shortenForm {
+	background: url('../../images/bg-shorten-desktop.svg') no-repeat center/cover,
+		var(--secondary-400);
+	padding: var(--s4) var(--s5);
+	border-radius: var(--s1);
+	display: flex;
+	gap: var(--s2);
+}
+
+.shortenForm__input {
+	border: none;
+	font-family: inherit;
+	border-radius: var(--s1);
+	padding: var(--s1) var(--s4);
+	font-size: var(--s2);
+	flex-grow: 1;
+}
+
+.shorten.btn {
+	border-radius: var(--s1);
+	padding: var(--s2) var(--s4);
+	font-size: var(--s2);
+}
