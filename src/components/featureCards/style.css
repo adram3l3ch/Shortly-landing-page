@@ -28,7 +28,7 @@
 .featureCard__image {
 	width: 5rem;
 	aspect-ratio: 1;
-	background-color: rgb(14, 15, 15);
+	background-color: var(--secondary-400);
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
@@ -39,5 +39,5 @@
 }
 
 .featureCard__title {
-	margin-top: var(--s4);
+	margin-block: var(--s3) var(--s1);
 }

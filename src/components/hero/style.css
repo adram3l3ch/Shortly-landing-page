@@ -1,19 +1,21 @@
 .intro {
+	padding-block: 7rem 4rem;
+	background: url('../../images/illustration-working.svg') no-repeat left 57vw center;
+	background-size: auto 90%;
+}
+
+.intro .container {
 	display: grid;
-	grid-template-columns: 2fr 1fr;
-	gap: var(--s4);
-	align-items: center;
+	grid-template-columns: calc(min(60vw, 720px)) 1fr;
+	justify-items: left;
+}
+
+.intro .container > * {
+	grid-column: 1/2;
 }
 
 .hero__text {
 	margin-bottom: var(--s3);
-}
-
-.intro .image {
-	height: 500px;
-	position: relative;
-}
-
-.intro img {
-	position: absolute;
+	font-size: 1.4rem;
+	width: 80%;
 }

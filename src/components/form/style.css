@@ -1,7 +1,7 @@
 .shortenForm {
 	background: url('../../images/bg-shorten-desktop.svg') no-repeat center/cover,
 		var(--secondary-400);
-	padding: var(--s5) var(--s6);
+	padding: var(--s6) calc(var(--s6) + var(--s1));
 	border-radius: var(--s1);
 	display: flex;
 	gap: var(--s2);
@@ -15,12 +15,12 @@
 	font-family: inherit;
 	border-radius: var(--s1);
 	padding: var(--s1) var(--s4);
-	font-size: var(--s2);
+	font-size: 1.25rem;
 	flex-grow: 1;
 }
 
 .shorten.btn {
 	border-radius: var(--s1);
 	padding: var(--s2) var(--s4);
-	font-size: var(--s2);
+	font-size: 1.25rem;
 }
