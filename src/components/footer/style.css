@@ -1,0 +1,32 @@
+.footer {
+	background-color: var(--secondary-200);
+	padding-block: var(--s6);
+}
+
+.footer .container {
+	display: grid;
+	grid-template-columns: 2fr repeat(4, 1fr);
+}
+
+.footer__logo path {
+	fill: white;
+}
+
+.footer__navlinks__title {
+	color: white;
+	margin-bottom: var(--s1);
+}
+
+.footer__navlinks .navlink {
+	color: var(--secondary-500);
+	line-height: 2em;
+	cursor: pointer;
+}
+
+.socialLinks {
+	display: flex;
+	align-items: center;
+	gap: var(--s4);
+	height: max-content;
+	justify-self: end;
+}

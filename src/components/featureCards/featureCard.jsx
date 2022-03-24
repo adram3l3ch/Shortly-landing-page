@@ -1,5 +1,4 @@
 import React from 'react';
-import './style.css';
 
 const FeatureCard = ({ image, title, text, index }) => {
 	return (

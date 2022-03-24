@@ -30,7 +30,21 @@ body {
 	font-family: 'Poppins', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background-color: var(--secondary-600);
+}
+
+h1,
+h2,
+h3,
+h4 {
+	color: var(--secondary-200);
+}
+
+h1 {
+	font-size: var(--s6);
+}
+
+p {
+	color: var(--secondary-500);
 }
 
 li {
@@ -38,10 +52,15 @@ li {
 }
 
 .app {
-	max-width: 1440px;
-	margin: 0 auto;
+	padding-block: var(--s4);
 }
 
-.cta {
+.container {
+	max-width: 1440px;
+	margin-inline: auto;
+}
+
+.cta.btn {
 	font-size: var(--s2);
+	padding-inline: var(--s3);
 }

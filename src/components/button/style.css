@@ -4,4 +4,5 @@
 	padding: var(--s1) var(--s2);
 	border-radius: 10rem;
 	color: white;
+	cursor: pointer;
 }

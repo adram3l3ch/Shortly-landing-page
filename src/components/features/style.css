@@ -1,0 +1,11 @@
+.features {
+	background-color: var(--secondary-600);
+	padding-block: 10rem 8rem;
+}
+
+.features__title,
+.features__text {
+	text-align: center;
+	max-width: 30rem;
+	margin-inline: auto;
+}

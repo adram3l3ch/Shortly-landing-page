@@ -1,10 +1,13 @@
 .shortenForm {
 	background: url('../../images/bg-shorten-desktop.svg') no-repeat center/cover,
 		var(--secondary-400);
-	padding: var(--s4) var(--s5);
+	padding: var(--s5) var(--s6);
 	border-radius: var(--s1);
 	display: flex;
 	gap: var(--s2);
+	max-width: 80rem;
+	margin-inline: auto;
+	transform: translateY(50%);
 }
 
 .shortenForm__input {

@@ -3,6 +3,7 @@ import FeatureCard from './featureCard';
 import CardImage1 from '../../images/icon-brand-recognition.svg';
 import CardImage2 from '../../images/icon-detailed-records.svg';
 import CardImage3 from '../../images/icon-fully-customizable.svg';
+import './style.css';
 
 const FeatureCards = () => {
 	return (
