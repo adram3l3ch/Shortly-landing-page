@@ -73,5 +73,15 @@ li {
 
 .navlink {
 	cursor: pointer;
-	width: max-content;
+}
+
+@media (max-width: 800px) {
+	h1 {
+		font-size: clamp(2rem, 11vw, 4rem);
+	}
+}
+@media (max-width: 350px) {
+	:root {
+		font-size: calc(1rem - 5px);
+	}
 }

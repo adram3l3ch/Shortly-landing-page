@@ -26,3 +26,9 @@
 .login {
 	margin-left: auto;
 }
+
+@media (max-width: 800px) {
+	.header__navlinks {
+		display: none;
+	}
+}

@@ -14,7 +14,7 @@
 	border: none;
 	font-family: inherit;
 	border-radius: var(--s1);
-	padding: var(--s1) var(--s4);
+	padding: var(--s2) var(--s4);
 	font-size: 1.25rem;
 	flex-grow: 1;
 }
@@ -23,4 +23,15 @@
 	border-radius: var(--s1);
 	padding: var(--s2) var(--s4);
 	font-size: 1.25rem;
+}
+
+@media (max-width: 800px) {
+	.shortenForm {
+		flex-direction: column;
+		gap: var(--s3);
+		padding: var(--s4);
+	}
+	.shortenForm__input {
+		padding-inline: var(--s2);
+	}
 }

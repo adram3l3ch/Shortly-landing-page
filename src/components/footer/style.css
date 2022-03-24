@@ -31,3 +31,15 @@
 	height: max-content;
 	justify-self: end;
 }
+
+@media (max-width: 800px) {
+	.footer .container {
+		grid-template-columns: 1fr;
+		justify-items: center;
+		text-align: center;
+	}
+
+	.socialLinks {
+		justify-self: unset;
+	}
+}
