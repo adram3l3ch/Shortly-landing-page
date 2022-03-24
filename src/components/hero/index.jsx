@@ -2,7 +2,7 @@ import Button from '../button';
 import Form from '../form';
 import './style.css';
 
-const Hero = () => {
+const Hero = ({ setLinks }) => {
 	return (
 		<main className='hero'>
 			<div className='intro'>
@@ -16,7 +16,7 @@ const Hero = () => {
 				</div>
 			</div>
 			<div className='container'>
-				<Form />
+				<Form setLinks={setLinks} />
 			</div>
 		</main>
 	);

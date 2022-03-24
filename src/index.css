@@ -75,6 +75,10 @@ li {
 	cursor: pointer;
 }
 
+.navlink:hover {
+	color: var(--secondary-200);
+}
+
 @media (max-width: 800px) {
 	h1 {
 		font-size: clamp(2rem, 11vw, 4rem);

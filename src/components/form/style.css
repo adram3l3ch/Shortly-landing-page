@@ -53,7 +53,7 @@
 		gap: var(--s3);
 		padding: var(--s4);
 	}
-	.shortenForm__input {
+	.shortenForm__input input {
 		padding-inline: var(--s2);
 	}
 }

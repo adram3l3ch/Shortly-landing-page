@@ -17,12 +17,20 @@ const Footer = () => {
 				/>
 				<FooterLink title='Resources' links={['Blog', 'Developers', 'Support']} />
 				<FooterLink title='Company' links={['About', 'Our Team', 'Careers', 'Contact']} />
-				<div className='socialLinks'>
-					<Facebook />
-					<Twitter />
-					<Pinterest />
-					<Instagram />
-				</div>
+				<ul className='socialLinks'>
+					<li className='navlink'>
+						<Facebook />
+					</li>
+					<li className='navlink'>
+						<Twitter />
+					</li>
+					<li className='navlink'>
+						<Pinterest />
+					</li>
+					<li className='navlink'>
+						<Instagram />
+					</li>
+				</ul>
 			</div>
 		</footer>
 	);

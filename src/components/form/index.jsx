@@ -10,13 +10,14 @@ const initialState = {
 	link: '',
 };
 
-const Form = () => {
+const regExp =
+	/((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/;
+
+const Form = ({ setLinks }) => {
 	const [{ isError, errorMessage, link }, dispatch] = useReducer(reducer, initialState);
 
 	const handleSubmit = async e => {
 		e.preventDefault();
-		const regExp =
-			/((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/;
 		if (link === '') {
 			dispatch(showError('please add a link'));
 		} else if (!regExp.test(link)) {
@@ -24,8 +25,12 @@ const Form = () => {
 		} else {
 			dispatch(hideError());
 			try {
-				const data = await shortenLink(link);
-				console.log(data);
+				const { result } = await shortenLink(link);
+				setLinks(links => [
+					{ original: link, shortened: result.full_short_link2 },
+					...links.filter(_link => _link.original !== link),
+				]);
+				dispatch(setLink(''));
 			} catch (error) {
 				dispatch(showError(error.message));
 			}
