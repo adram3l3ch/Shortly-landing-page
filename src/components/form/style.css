@@ -19,7 +19,7 @@
 	border: none;
 	font-family: inherit;
 	border-radius: var(--s1);
-	padding: var(--s2) var(--s4);
+	padding: var(--s2) var(--s3);
 	font-size: 1.25rem;
 	width: 100%;
 }
@@ -42,7 +42,7 @@
 
 .errorText {
 	position: absolute;
-	bottom: -2rem;
+	bottom: -2.2rem;
 	font-style: italic;
 	color: var(--accent);
 }
@@ -50,7 +50,7 @@
 @media (max-width: 800px) {
 	.shortenForm {
 		flex-direction: column;
-		gap: var(--s3);
+		gap: var(--s5);
 		padding: var(--s4);
 	}
 	.shortenForm__input input {

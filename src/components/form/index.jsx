@@ -20,21 +20,26 @@ const Form = ({ setLinks }) => {
 	const handleSubmit = async e => {
 		e.preventDefault();
 		if (link === '') {
-			dispatch(showError('please add a link'));
+			return dispatch(showError('please add a link'));
 		} else if (!regExp.test(link)) {
-			dispatch(showError('please add a valid link'));
-		} else {
-			dispatch(hideError());
-			try {
-				const { result } = await shortenLink(link);
+			return dispatch(showError('please add a valid link'));
+		}
+		dispatch(hideError());
+		try {
+			const data = await shortenLink(link);
+			if (data.ok) {
+				const { full_short_link2 } = data.result;
 				setLinks(links => [
-					{ original: link, shortened: result.full_short_link2 },
+					{ original: link, shortened: full_short_link2 },
 					...links.filter(_link => _link.original !== link),
 				]);
-				dispatch(setLink(''));
-			} catch (error) {
-				dispatch(showError(error.message));
+			} else {
+				throw new Error(data.disallowed_reason);
 			}
+		} catch (error) {
+			dispatch(showError(error.message));
+		} finally {
+			dispatch(setLink(''));
 		}
 	};
 
