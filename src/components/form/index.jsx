@@ -1,6 +1,7 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useState } from 'react';
 import { shortenLink } from '../../API';
 import Button from '../button';
+import Loader from './Loader';
 import reducer, { hideError, setLink, showError } from './reducer';
 import './style.css';
 
@@ -17,6 +18,8 @@ const regExp =
 const Form = ({ setLinks }) => {
 	const [{ isError, errorMessage, link }, dispatch] = useReducer(reducer, initialState);
 
+	const [isLoading, setIsLoading] = useState(false);
+
 	const handleSubmit = async e => {
 		e.preventDefault();
 		if (link === '') {
@@ -26,6 +29,7 @@ const Form = ({ setLinks }) => {
 		}
 		dispatch(hideError());
 		try {
+			setIsLoading(true);
 			const data = await shortenLink(link);
 			if (data.ok) {
 				const { full_short_link2 } = data.result;
@@ -40,6 +44,7 @@ const Form = ({ setLinks }) => {
 			dispatch(showError(error.message));
 		} finally {
 			dispatch(setLink(''));
+			setIsLoading(false);
 		}
 	};
 
@@ -54,7 +59,7 @@ const Form = ({ setLinks }) => {
 				/>
 				{isError && <p className='errorText'>{errorMessage}</p>}
 			</div>
-			<Button label='Shorten It!' classes='shorten' />
+			<Button label={isLoading ? <Loader /> : 'Shorten!'} classes='shorten' />
 		</form>
 	);
 };
